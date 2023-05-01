@@ -1,0 +1,10 @@
+# Dockerfile for the database container
+
+FROM mysql:8.0.26
+
+ENV MYSQL_DATABASE mydb
+ENV MYSQL_USER user
+ENV MYSQL_PASSWORD password
+ENV MYSQL_ROOT_PASSWORD root_password
+
+COPY ./database.sql /docker-entrypoint-initdb.d/

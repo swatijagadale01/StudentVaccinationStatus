@@ -1,0 +1,17 @@
+services:
+  frontend:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app.py:/app/app.py
+
+  database:
+    build: ../database
+    environment:
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - "5001:3306"

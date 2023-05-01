@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Vaccination Status</title>
+</head>
+<body>
+	<h1>Student Vaccination Status</h1>
+	{% if error %}
+		<p>{{ error }}</p>
+	{% else %}
+		<p>Name: {{ name }}</p>
+		<p>Vaccination Status: {{ vaccinated }}</p>
+	{% endif %}
+	<a href="/">Back to Home</a>
+</body>
+</html>
